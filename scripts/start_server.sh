@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd /home/ubuntu/Projeto
 source env/bin/activate
-python manage.py runserver &
+python manage.py runserver 0.0.0.0:8000 &
