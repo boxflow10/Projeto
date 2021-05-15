@@ -3,6 +3,8 @@ os: linux
 files:
  - source: /Projeto/
    destination: /home/ubuntu/Projeto
+ - source: requirements.txt
+   destination: /home/ubuntu/
 hooks:
   AfterInstall:
     - location: scripts/dependencias
