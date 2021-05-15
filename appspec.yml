@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+ - source: /Projeto/
+   destination: /home/ubuntu/Projeto
+permissions:
+  - object: /home/ec2-user/manage.py
+    owner: ubuntu
+    mode: 644
+    type:
+      - file
+hooks:
+  AfterInstall:
+    - location: scripts/dependencias
+      timeout: 300
+      runas: root
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
