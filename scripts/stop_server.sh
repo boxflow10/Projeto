@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 pkill -f runserver
-lsof -t -i tcp:8000 | xargs kill -9
+#lsof -t -i tcp:8000 | xargs kill -9
