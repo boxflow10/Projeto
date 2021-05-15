@@ -7,13 +7,13 @@ files:
    destination: /home/ubuntu/
 hooks:
   AfterInstall:
-    - location: scripts/dependencias
+    - location: scripts/dependencias.sh
       timeout: 300
       runas: root
-    - location: scripts/start_server
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
