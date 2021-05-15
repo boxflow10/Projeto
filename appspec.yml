@@ -3,12 +3,6 @@ os: linux
 files:
  - source: /Projeto/
    destination: /home/ubuntu/Projeto
-permissions:
-  - object: /home/ubuntu/Projeto/manage.py
-    owner: ubuntu
-    mode: 644
-    type:
-      - file
 hooks:
   AfterInstall:
     - location: scripts/dependencias
